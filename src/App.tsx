@@ -6,7 +6,7 @@ import { Preview } from "./components/preview";
 function App() {
   const [invoice, setInvoice] = useState<Invoice>({
     Customer: { customerName: '', customerAdress: '', customerEmail: '' },
-    Company: { companyName: '', companyAdress: '', companyEmail: '' },
+    Company: { companyName: '', companyAdress: '', companyEmail: '', bankDetails: ''},
     items: [],
     invoiceNumber: 1,
     date: '',
