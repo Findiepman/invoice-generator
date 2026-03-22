@@ -7,6 +7,7 @@ export interface Company {
     companyName: string
     companyAdress: string
     companyEmail: string
+    bankDetails: string
 }
 export interface Item {
     price: number
