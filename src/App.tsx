@@ -1,5 +1,7 @@
 import { useState } from "react"
 import type { Invoice } from "./types/types"
+import { Form } from "./components/form";
+import { Preview } from "./components/preview";
 
 function App() {
   const [invoice, setInvoice] = useState<Invoice>({
@@ -13,7 +15,9 @@ function App() {
   });
 
   return (
-    <div>Hello world</div>
+    <div>
+      <Form invoice={invoice} setInvoice={setInvoice} /> <Preview invoice={invoice} />
+    </div>
   )
 }
 
