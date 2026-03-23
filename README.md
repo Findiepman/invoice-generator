@@ -2,7 +2,7 @@
 
 A client-side invoice generator built for freelancers and small businesses. Fill in your company details, client info, and line items — a live preview updates instantly on the right. Download the finished invoice as a PDF in one click.
 
-![Invoice Generator](screenshot.png)
+![Invoice Generator](preview.png)
 
 ## Features
 
