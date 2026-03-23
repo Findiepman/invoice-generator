@@ -233,13 +233,13 @@
 .inv-totals-total span:first-child {
     font-size: 11px;
     font-weight: 800;
-    color: #ffffff;
+    color: #111111;
 }
 
 .inv-totals-total span:last-child {
     font-size: 28px;
     font-weight: 800;
-    color: #ffffff;
+    color: #111111;
 }
 
 /* ---- FOOTER ---- */

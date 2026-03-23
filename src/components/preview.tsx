@@ -4,13 +4,15 @@ import { jsPDF } from 'jspdf';
 import './Preview.css'
 
 
+
 interface PreviewProps {
     invoice: Invoice;
 }
 
 export function Preview({ invoice }: PreviewProps) {
-    const subtotal = invoice.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    const vatAmount = subtotal * (invoice.btw / 100);
+    const subtotal: number = invoice.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    const vatPercentage = Number.parseFloat(invoice.btw) || 0;
+    const vatAmount = subtotal * (vatPercentage / 100);
     const total = subtotal + vatAmount;
 
     const downloadPDF = async () => {
@@ -115,7 +117,7 @@ export function Preview({ invoice }: PreviewProps) {
                         <span>€{subtotal.toFixed(2)}</span>
                     </div>
                     <div className="inv-totals-row">
-                        <span>BTW ({invoice.btw}%)</span>
+                        <span>BTW ({vatPercentage}%)</span>
                         <span>€{vatAmount.toFixed(2)}</span>
                     </div>
                     <div className="inv-totals-row inv-totals-total">

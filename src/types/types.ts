@@ -19,10 +19,10 @@ export interface Invoice {
     Customer: Customer
     Company: Company
     items: Item[]
-    invoiceNumber: number
+    invoiceNumber: string
     date: string
     paymentTerms: string
-    btw: number
+    btw: string
     btwNummer: string
     kvkNummer: string
 }

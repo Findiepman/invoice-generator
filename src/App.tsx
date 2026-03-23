@@ -8,10 +8,10 @@ function App() {
     Customer: { customerName: '', customerAdress: '', customerEmail: '' },
     Company: { companyName: '', companyAdress: '', companyEmail: '', bankDetails: '' },
     items: [],
-    invoiceNumber: 1,
+    invoiceNumber: '',
     date: '',
     paymentTerms: '',
-    btw: 0,
+    btw: '',
     btwNummer: '',
     kvkNummer: ''
   });

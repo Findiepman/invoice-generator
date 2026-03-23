@@ -52,7 +52,7 @@ export function Form({ invoice, setInvoice }: FormProps) {
                     <p className="form-section-title">Invoice Details</p>
                     <input className="input-item" placeholder="Invoice Number"
                         value={invoice.invoiceNumber}
-                        onChange={(e) => setInvoice({ ...invoice, invoiceNumber: Number(e.target.value) })} />
+                        onChange={(e) => setInvoice({ ...invoice, invoiceNumber: e.target.value })} />
                     <input className="input-item" placeholder="Date"
                         value={invoice.date}
                         onChange={(e) => setInvoice({ ...invoice, date: e.target.value })} />
@@ -61,7 +61,7 @@ export function Form({ invoice, setInvoice }: FormProps) {
                         onChange={(e) => setInvoice({ ...invoice, paymentTerms: e.target.value })} />
                     <input className="input-item" placeholder="VAT %"
                         value={invoice.btw}
-                        onChange={(e) => setInvoice({ ...invoice, btw: Number(e.target.value) })} />
+                        onChange={(e) => setInvoice({ ...invoice, btw: e.target.value })} />
                     <input className="input-item" placeholder="BTW Nummer"
                         value={invoice.btwNummer}
                         onChange={(e) => setInvoice({ ...invoice, btwNummer: e.target.value })} />
