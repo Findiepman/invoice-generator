@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Invoice Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A client-side invoice generator built for freelancers and small businesses. Fill in your company details, client info, and line items — a live preview updates instantly on the right. Download the finished invoice as a PDF in one click.
 
-Currently, two official plugins are available:
+![Invoice Generator](screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Live preview** — every keystroke updates the invoice in real time
+- **Line item management** — add and remove items with auto-calculated subtotals
+- **PDF export** — download a print-ready PDF using html2canvas + jsPDF
+- **Full invoice fields** — company details, client info, invoice number, date, payment terms, BTW, KVK, bank details
+- **VAT calculation** — automatic BTW amount and grand total
+- **Dutch compliance** — includes BTW number, KVK number, and payment details
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React + TypeScript
+- Vite
+- html2canvas + jsPDF (PDF export)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## How It Works
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Everything runs in the browser — no backend, no database. All invoice data lives in a single React `useState` object that both the form and preview read from. When you type in the form, the state updates and the preview re-renders instantly.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The PDF export uses html2canvas to screenshot the preview panel and jsPDF to wrap it into a downloadable A4 PDF.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Setup
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+invoice-generator/
+├── src/
+│   ├── App.tsx              — state + layout
+│   ├── components/
+│   │   ├── Form.tsx         — all inputs
+│   │   └── Preview.tsx      — live invoice + PDF export
+│   └── types/
+│       └── types.ts         — Invoice, Company, Customer, Item interfaces
 ```
