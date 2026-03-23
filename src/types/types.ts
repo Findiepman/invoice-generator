@@ -22,5 +22,7 @@ export interface Invoice {
     invoiceNumber: number
     date: string
     paymentTerms: string
-    vat: number
+    btw: number
+    btwNummer: string
+    kvkNummer: string
 }

@@ -1,0 +1,290 @@
+﻿/* ==============================================
+   PREVIEW - Exact Canva zwart factuur template
+   A4 formaat, klaar voor PDF export
+   ============================================== */
+
+/* Wrapper: witte achtergrond, margin links */
+.preview-wrapper {
+    width: 100%;
+    padding: 32px 32px 32px 48px;
+    box-sizing: border-box;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Download button */
+.pdf-download-btn {
+    margin-bottom: 20px;
+    padding: 10px 28px;
+    background: #0d0d0d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: center;
+}
+
+.pdf-download-btn:hover {
+    background: #333;
+}
+
+/* A4 pagina */
+.preview-page {
+    width: 210mm;
+    min-height: 297mm;
+    background: #ffffff;
+    padding: 60px;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ---- HEADER ---- */
+.inv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.inv-brand {
+    font-size: 22px;
+    font-weight: 800;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.inv-title {
+    font-size: 52px;
+    font-weight: 900;
+    color: #000000;
+    margin: 0;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Company details under brand name */
+.inv-company-details {
+    margin-top: 10px;
+}
+
+.inv-company-details p {
+    font-size: 11px;
+    color: #888888;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* ---- DIVIDER ---- */
+.inv-line {
+    height: 1px;
+    background: #2a2a2a;
+    border: none;
+    margin: 32px 0;
+}
+
+/* ---- INFO ROW: bill to + meta ---- */
+.inv-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Section label (reused) */
+.inv-section-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #666666;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+}
+
+.inv-bill-to {
+    flex: 1;
+}
+
+.inv-client-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 4px 0;
+}
+
+.inv-client-detail {
+    font-size: 12px;
+    color: #888888;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Meta block */
+.inv-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: right;
+}
+
+.inv-meta-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
+}
+
+.inv-meta-label {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #666666;
+    text-transform: uppercase;
+}
+
+.inv-meta-val {
+    font-size: 13px;
+    font-weight: 500;
+    color: #ffffff;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* ---- TABLE ---- */
+.inv-tbl {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inv-tbl thead tr {
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.inv-tbl th {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #666666;
+    padding: 14px 0;
+    text-transform: uppercase;
+}
+
+.inv-tbl tbody tr {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.inv-tbl tbody tr:last-child {
+    border-bottom: none;
+}
+
+.inv-tbl tbody td {
+    padding: 16px 0;
+    font-size: 13px;
+    color: #cccccc;
+}
+
+/* ---- TOTALS ---- */
+.inv-totals {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.inv-totals-row {
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+
+.inv-totals-row span:first-child {
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #666666;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
+
+.inv-totals-row span:last-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: #cccccc;
+}
+
+.inv-totals-total {
+    border-top: 1px solid #2a2a2a;
+    padding-top: 16px;
+    margin-top: 8px;
+}
+
+.inv-totals-total span:first-child {
+    font-size: 11px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.inv-totals-total span:last-child {
+    font-size: 28px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+/* ---- FOOTER ---- */
+.inv-footer {
+    margin-top: auto;
+    padding-top: 32px;
+    border-top: 1px solid #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.inv-footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.inv-footer-text {
+    font-size: 11px;
+    color: #777777;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.inv-footer-right {
+    text-align: right;
+}
+
+.inv-footer-thanks {
+    font-size: 11px;
+    color: #555555;
+    margin: 0;
+    font-style: italic;
+}
+
+/* ---- PRINT / PDF ---- */
+@media print {
+    .preview-wrapper {
+        padding: 0;
+        background: none;
+    }
+    .preview-page {
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+    }
+}

@@ -6,17 +6,24 @@ import { Preview } from "./components/preview";
 function App() {
   const [invoice, setInvoice] = useState<Invoice>({
     Customer: { customerName: '', customerAdress: '', customerEmail: '' },
-    Company: { companyName: '', companyAdress: '', companyEmail: '', bankDetails: ''},
+    Company: { companyName: '', companyAdress: '', companyEmail: '', bankDetails: '' },
     items: [],
     invoiceNumber: 1,
     date: '',
     paymentTerms: '',
-    vat: 0,
+    btw: 0,
+    btwNummer: '',
+    kvkNummer: ''
   });
 
   return (
-    <div>
-      <Form invoice={invoice} setInvoice={setInvoice} /> <Preview invoice={invoice} />
+    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden', background: '#f0f2f5' }}>
+      <div style={{ width: '50%', height: '100%', overflowY: 'auto' }}>
+        <Form invoice={invoice} setInvoice={setInvoice} />
+      </div>
+      <div style={{ width: '50%', height: '100%', overflowY: 'auto', background: '#ffffff', marginLeft: '24px' }}>
+        <Preview invoice={invoice} />
+      </div>
     </div>
   )
 }

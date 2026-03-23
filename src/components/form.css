@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin-bottom: 16px;
+}
+
+.header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-section {
+    margin-bottom: 24px;
+}
+
+.form-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin: 0 0 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee;
+}
+
+.input-item {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    margin-bottom: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background: #fafafa;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-item:focus {
+    border-color: #4a6cf7;
+    background: #fff;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.form-row .input-item {
+    margin-bottom: 0;
+}
+
+.items-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.items-header span {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    padding: 0 10px;
+}
+
+.btn-add {
+    margin-top: 8px;
+    padding: 8px 16px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background: #3558e8;
+}
+
+.btn-remove {
+    padding: 6px 10px;
+    background: #fff0f0;
+    color: #e53935;
+    border: 1px solid #ffcdd2;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-remove:hover {
+    background: #ffebee;
+}
